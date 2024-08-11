@@ -1,0 +1,33 @@
+﻿' Function to perform login
+Function PerformLogin(username, password)
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").WebEdit("name:=user-name").Set username
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").WebEdit("name:=password").Set password
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").WebButton("html id:=login-button").Click
+    ' Wait for the page to load after login
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").Sync
+End Function
+
+' Function to verify login success
+Function VerifyLogin()
+    Dim inventoryElement
+    Set inventoryElement = Description.Create
+    inventoryElement("html tag").Value = "DIV"
+    inventoryElement("class").Value = "inventory_list"
+    If Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(inventoryElement).Exist(10) Then
+        Reporter.ReportEvent micPass, "Login Verification", "Login successful"
+        VerifyLogin = True
+    Else
+        Dim errorElement
+        Set errorElement = Description.Create
+        errorElement("html tag").Value = "H3" 
+        If Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(errorElement).Exist(10) Then
+            Dim errorMessage
+            errorMessage = Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(errorElement).GetROProperty("innertext")
+            Reporter.ReportEvent micFail, "Login Verification", "Login failed: " & errorMessage
+        Else
+            Reporter.ReportEvent micFail, "Login Verification", "Login failed: Unknown error"
+        End If
+        VerifyLogin = False
+    End If
+End Function
+

@@ -1,0 +1,1 @@
+﻿var __testDataSource={items:[{dataFilePath:'Default.xlsx',dataFileFormat:'excel',dataFileFolder:'C:\\Users\\zadmin\\Documents\\Framework\\Tests\\Test_Login\\Test_Login\\Res2',namePairs:[]}]};

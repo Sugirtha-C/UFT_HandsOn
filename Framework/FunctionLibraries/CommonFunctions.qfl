@@ -1,0 +1,11 @@
+﻿' Function to open browser and navigate to URL
+Function OpenBrowser(url)
+    SystemUtil.Run "chrome.exe", url
+    ' Wait for the browser to open
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").Sync
+End Function
+' Function to close browser
+Function CloseBrowser()
+    Browser("name:=Swag Labs").Close
+End Function
+

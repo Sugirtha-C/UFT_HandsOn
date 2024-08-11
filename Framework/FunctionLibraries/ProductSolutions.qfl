@@ -1,0 +1,16 @@
+﻿' Function to search for a product
+Function SearchProduct(productName)
+    Dim productElement
+    Set productElement = Description.Create
+    productElement("html tag").Value = "DIV"
+    productElement("innerhtml").Value = productName
+    productElement("innertext").Value = productName
+    If Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(productElement).Exist(10) Then
+        Reporter.ReportEvent micPass, "Product Search", "Product found: " & productName
+        SearchProduct = True
+    Else
+        Reporter.ReportEvent micFail, "Product Search", "Product not found: " & productName
+        SearchProduct = False
+    End If
+End Function
+

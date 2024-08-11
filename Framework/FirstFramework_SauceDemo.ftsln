@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+# SharpDevelop 4.1.3.0
+Project("") = "Test_ProductSearch", "Tests\Test_ProductSearch\Test_ProductSearch\Test.tsp", "C1656C9E-304B-4F11-BC2E-6B55208037C8"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\zadmin\Documents\Framework\Tests\Test_ProductSearch\Test_ProductSearch\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Test_Login", "Tests\Test_Login\Test_Login\Test.tsp", "FC196C2A-0FD2-4D46-8ADF-AE609904C7A0"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\zadmin\Documents\Framework\Tests\Test_Login\Test_Login\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Project("") = "Test_Checkout", "Tests\Test_Checkout\Test_Checkout\Test.tsp", "C215B1DA-6D77-4731-BC6A-49396D932910"
+	ProjectSection(ProjectMetadata) = HP.UFT.ProjectSystem.Dynamic.ProjectMetadata
+		PathInformation = C:\Users\zadmin\Documents\Framework\Tests\Test_Checkout\Test_Checkout\Test.tsp
+		Keyword = QTP
+		OpenAsReadOnly = False
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		C1656C9E-304B-4F11-BC2E-6B55208037C8.Debug|Any CPU.Build.0 = Debug|Any CPU
+		C1656C9E-304B-4F11-BC2E-6B55208037C8.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		C1656C9E-304B-4F11-BC2E-6B55208037C8.Release|Any CPU.Build.0 = Release|Any CPU
+		C1656C9E-304B-4F11-BC2E-6B55208037C8.Release|Any CPU.ActiveCfg = Release|Any CPU
+		FC196C2A-0FD2-4D46-8ADF-AE609904C7A0.Debug|Any CPU.Build.0 = Debug|Any CPU
+		FC196C2A-0FD2-4D46-8ADF-AE609904C7A0.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		FC196C2A-0FD2-4D46-8ADF-AE609904C7A0.Release|Any CPU.Build.0 = Release|Any CPU
+		FC196C2A-0FD2-4D46-8ADF-AE609904C7A0.Release|Any CPU.ActiveCfg = Release|Any CPU
+		C215B1DA-6D77-4731-BC6A-49396D932910.Debug|Any CPU.Build.0 = Debug|Any CPU
+		C215B1DA-6D77-4731-BC6A-49396D932910.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		C215B1DA-6D77-4731-BC6A-49396D932910.Release|Any CPU.Build.0 = Release|Any CPU
+		C215B1DA-6D77-4731-BC6A-49396D932910.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(Function Libraries) = postProject
+		CaptureScreenshotFunction = C:\Users\zadmin\Documents\Framework\FunctionLibraries\CaptureScreenshotFunction.qfl
+	EndGlobalSection
+EndGlobal

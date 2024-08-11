@@ -1,0 +1,7 @@
+﻿Function CaptureScreenshot(fileName)
+    Dim uniqueID,screenPath
+    uniqueID = DataTable("Username", dtGlobalSheet)
+    screenPath = "C:\Users\zadmin\Documents\Framework\Results" & fileName&"_"&uniqueID&".png"
+    Browser("name:=Swag Labs").CaptureBitmap screenPath
+    Reporter.ReportEvent micDone, "Screenshot", "Captured screenshot: " & fileName, screenPath
+End Function

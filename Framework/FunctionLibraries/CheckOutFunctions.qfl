@@ -1,0 +1,24 @@
+﻿' Function to add product to cart and checkout
+Function AddProductToCartAndCheckout(productName)
+    ' Add product to cart
+    Dim productElement, addToCartButton
+    Set productElement = Description.Create
+    productElement("html tag").Value = "DIV"
+ productElement("innerhtml").Value = productName
+    productElement("innertext").Value = productName
+    If Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(productElement).Exist(10) Then
+        Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(productElement).Click
+        Set addToCartButton = Description.Create 
+        addToCartButton("innerhtml").Value="ADD TO CART"
+        Browser("name:=Swag Labs").Page("title:=Swag Labs").WebElement(addToCartButton).Click
+        Reporter.ReportEvent micPass, "Add to Cart", "Product added to cart: " & productName
+    Else
+        Reporter.ReportEvent micFail, "Add to Cart", "Product not found: " & productName
+        Exit Function
+    End If
+    ' Proceed to checkout
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").Link("xpath:=//a[@class='shopping_cart_link']").Click
+    Browser("name:=Swag Labs").Page("title:=Swag Labs").WebButton("innerhtml:=CHECKOUT").Click
+    Reporter.ReportEvent micPass, "Checkout", "Proceeded to checkout for product: " & productName
+End Function
+
